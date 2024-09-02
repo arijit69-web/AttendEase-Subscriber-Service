@@ -169,5 +169,5 @@ amqp.connect(rabbitMqUrl, (err, connection) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is up and running`);
 });
