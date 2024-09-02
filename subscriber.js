@@ -8,7 +8,7 @@ require('dotenv').config();
 const app = express();
 const port = 3000;
 
-const rabbitMqUrl = process.env.AMQP_URL;
+const rabbitMqUrl = process.env.RABBITMQ_URL;
 const mongoUri = process.env.MONGO_URI;
 const dbName = 'AttendEase';
 const attendanceCollectionName = 'attendanceDetails';
