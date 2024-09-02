@@ -97,10 +97,13 @@ async function insertDataToMongo(data, officeDetails) {
         const collection = database.collection(attendanceCollectionName);
 
         const currentDate = new Date();
+
+        const istDate = new Date(currentDate.getTime() + (5.5 * 60 * 60 * 1000));
+        
         const formattedData = {
             ...data,
-            date: currentDate.toISOString().split('T')[0],
-            time: currentDate.toTimeString().split(' ')[0],
+            date: istDate.toISOString().split('T')[0], 
+            time: istDate.toTimeString().split(' ')[0], 
             officeDetails
         };
 
